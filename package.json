@@ -1,0 +1,30 @@
+{
+  "name": "convert",
+  "version": "1.0.0",
+  "description": "This program is a command-line tool for converting design tokens from a JSON file into CSS variables. It allows designers and developers to use design tokens in their front-end code, ensuring consistency and making it easier to update the design system.",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonstantinBelenko/convert.git"
+  },
+  "keywords": [
+    "figma",
+    "design",
+    "design",
+    "tokens",
+    "design",
+    "system",
+    "nodejs",
+    "javascript",
+    "script"
+  ],
+  "author": "Kostiantyn Bielienko | GFY Holding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KonstantinBelenko/convert/issues"
+  },
+  "homepage": "https://github.com/KonstantinBelenko/convert#readme"
+}
