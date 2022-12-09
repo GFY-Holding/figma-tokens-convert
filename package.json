@@ -8,23 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KonstantinBelenko/convert.git"
+    "url": "git+https://github.com/GFY-Holding/converter.git"
   },
   "keywords": [
     "figma",
     "design",
-    "design",
     "tokens",
-    "design",
+    "design-tokens",
     "system",
-    "nodejs",
-    "javascript",
-    "script"
+    "script",
+    "cli"
   ],
-  "author": "Kostiantyn Bielienko | GFY Holding",
+  "author": "GFY Holding | Kostiantyn Bielienko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KonstantinBelenko/convert/issues"
+    "url": "https://github.com/GFY-Holding/converter/issues"
   },
-  "homepage": "https://github.com/KonstantinBelenko/convert#readme"
+  "homepage": "https://github.com/GFY-Holding/converter#readme"
 }
