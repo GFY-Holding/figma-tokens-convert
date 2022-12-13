@@ -58,6 +58,22 @@ function traverse(obj, parent_names) {
 
                 else if (type === "custom-fontStyle") {
                     for (let fontStyle in value) {
+
+                        // Put font family in quotes
+                        if (fontStyle === "fontFamily") {
+                            value[fontStyle] = `"${value[fontStyle]}"`;
+                        }
+
+                        // Convert font size to px
+                        if (fontStyle === "fontSize") {
+                            value[fontStyle] = `${value[fontStyle]}px`;
+                        }
+
+                        // Convert line height to px
+                        if (fontStyle === "lineHeight") {
+                            value[fontStyle] = `${value[fontStyle]}px`;
+                        }
+
                         let css_var = names_to_css(parent_names.concat(key, fontStyle), value[fontStyle]);                        
                         localList.push(css_var);
                     }
