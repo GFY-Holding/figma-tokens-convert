@@ -11,21 +11,20 @@ To use the program, open a terminal or command prompt and navigate to the direct
 
 ```bash
 node convert.js <json file path> <output css file path> <prefix>[default is "token"]
-# For example, if your JSON file is located at C:\design-tokens.json and you want 
-# to create a CSS file at C:\css\tokens.css, you would run the following command:
 ```
-  
+For example, if your JSON file is located at C:\design-tokens.json and you want 
+to create a CSS file at C:\css\tokens.css, you would run the following command:
+
 ```bash
 node convert.js C:\design-tokens.json C:\css\tokens.css
-# You can also specify a prefix for your CSS variables by adding it as an additional argument. 
-# For example, if you want to use the prefix my-project, you would run the following command:
 ```
-  
+You can also specify a prefix for your CSS variables by adding it as an additional argument. 
+For example, if you want to use the prefix my-project, you would run the following command:
+
 ```bash
 node convert.js C:\design-tokens.json C:\css\tokens.css my-project
-# The program will then convert the design tokens in the JSON file and output 
-# the resulting CSS variables to the specified CSS file.
 ```
+The program will then convert the design tokens in the JSON file and output the resulting CSS variables to the specified CSS file.
   
 Output example of `node converter tokens.json main.css belo`
 
