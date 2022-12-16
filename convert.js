@@ -27,18 +27,14 @@ const converter = new traverse.converter(tokens_data, prefix, filePath2);
 traverse.start_file(filePath2)
 console.log(`🏃 Creating ${filePath2} 💨\n`);
 
-// Transform color tokens
-converter.parse_tokens('color', "🎨 Colors: done");
+// Loop over tokens_data keys
+for (let key in tokens_data) {
+    console.log(`🔎 Parsing ${key} ...`);
+    
+    converter.parse_tokens(key, `✅ Done`);
+    
+    console.log('')
+}
 
-// Transform gradient tokens
-converter.parse_tokens('gradient', "🌈 Gradients: done");
-
-// Transform font tokens
-converter.parse_tokens('font', "📝 Fonts: done");
-
-// Transform effect tokens
-converter.parse_tokens('effect', "✨ Effects: done");
-
-// End file with closing bracket
 traverse.end_file(filePath2);
-console.log(`\n🏁 Finished ${filePath2} ...`);
+console.log(`🏁 Finished ${filePath2} ...`);

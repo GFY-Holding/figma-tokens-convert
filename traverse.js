@@ -83,6 +83,23 @@ function traverse(obj, parent_names) {
                     let css_var = names_to_css(parent_names.concat(key, value.shadowType), `${value.offsetX} ${value.offsetY} ${value.radius} ${value.color}`);                        
                     localList.push(css_var);
                 }
+
+                else if (type === "custom-grid") {
+                    let gutterSize = names_to_css(parent_names.concat(key, 'size'), `${value.gutterSize}px`);                        
+                    let alignment = names_to_css(parent_names.concat(key, 'alignment'), `${value.alignment}`);                        
+                    let count = names_to_css(parent_names.concat(key, 'count'), `${value.count}`);                        
+                    let offset = names_to_css(parent_names.concat(key, 'offset'), `${value.offset}px`);                        
+                    
+                    localList.push(gutterSize);
+                    localList.push(alignment);
+                    localList.push(count);
+                    localList.push(offset);
+                }
+
+                else {
+                    let css_var = names_to_css(parent_names.concat(key), value);                        
+                    localList.push(css_var);
+                }
             }
         }
     }
