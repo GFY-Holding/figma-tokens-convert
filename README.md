@@ -1,3 +1,6 @@
+![NPM](https://img.shields.io/npm/l/figma-tokens-convert)
+![npm](https://img.shields.io/npm/dw/figma-tokens-convert)
+
 # Design Token Converter 💻
 This program is a command-line tool for converting design tokens from a JSON file into CSS variables. It allows designers and developers to use design tokens in their front-end code, ensuring consistency and making it easier to update the design system.
 <br>
