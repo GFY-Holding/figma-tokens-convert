@@ -4,19 +4,14 @@
   "description": "This program is a command-line tool for converting design tokens from a JSON file into CSS variables. It allows designers and developers to use design tokens in their front-end code, ensuring consistency and making it easier to update the design system.",
   "main": "lib/main.js",
   "scripts": {
-
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
-    
-    "prepublishOnly" : "npm test && npm run lint",
-    
-    "prepare" : "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "npm run build",
     "build": "tsc",
-
     "watch": "tsc -w",
     "start": "node lib/main.js ./src/__tests__/example_files/actual-tokens.json ./output.css test",
-    
     "test": "jest --config jestconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"

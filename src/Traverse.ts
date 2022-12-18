@@ -4,7 +4,7 @@ import { getJson, startCssFile, endCssFile } from './utils';
 export class Converter {
   private jsonPath: string;
   private outputPath: string;
-  private token_data: Object;
+  private tokenData: object;
   private prefix: string;
 
   constructor(jsonPath: string, outputPath: string, prefix: string) {
@@ -12,7 +12,7 @@ export class Converter {
     this.outputPath = outputPath;
     this.prefix = prefix;
 
-    this.token_data = getJson(this.jsonPath);
+    this.tokenData = getJson(this.jsonPath);
 
     // Start the output css file
     startCssFile(this.outputPath);
@@ -21,7 +21,7 @@ export class Converter {
   public parse_all(callback: Function, verbose: boolean = false): Error | void {
     // Loop over tokens_data keys
     try {
-      for (let key in this.token_data) {
+      for (let key in this.tokenData) {
         if (verbose) console.log(`🔎 Parsing ${key} ...`);
         this.parse_tokens(key, callback);
       }
@@ -50,10 +50,10 @@ export class Converter {
   private process_tree(token_name: keyof typeof Object): void | Error {
     try {
       // Get all children by token name
-      let key = token_name as keyof typeof this.token_data;
-      if (!(key in this.token_data)) throw new Error(`Token ${key} does not exist in ${this.jsonPath}.`);
+      let key = token_name as keyof typeof this.tokenData;
+      if (!(key in this.tokenData)) throw new Error(`Token ${key} does not exist in ${this.jsonPath}.`);
 
-      let children: object = this.token_data[key];
+      let children: object = this.tokenData[key];
 
       // convert child tokens to css variables
       let names_array: Array<string> = [token_name];
@@ -140,9 +140,7 @@ export class Converter {
             let radius = value['radius'];
             let color = value['color'];
 
-            let css_var = this.names_to_css(
-              names_array.concat(key, type), `${offsetX} ${offsetY} ${radius} ${color}`,
-            );
+            let css_var = this.names_to_css(names_array.concat(key, type), `${offsetX} ${offsetY} ${radius} ${color}`);
 
             localList.push(css_var);
           } else if (type === 'custom-grid') {

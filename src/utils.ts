@@ -1,6 +1,6 @@
-const fs = require('fs');
+import fs from 'fs';
 
-export const getJson = (path: string): Object => {
+export const getJson = (path: string): object => {
   try {
     const data = fs.readFileSync(path, 'utf-8');
     return JSON.parse(data);
